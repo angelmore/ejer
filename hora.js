@@ -11,6 +11,7 @@ server.on("request", function(req, res) {
 
 server.listen(process.env.PORT || 3000);
 
+/*
 {
   "name": "dry-wildwood-56068",
   "version": "1.0.0",
@@ -23,3 +24,4 @@ server.listen(process.env.PORT || 3000);
   "author": "",
   "license": "ISC"
 }
+*/
