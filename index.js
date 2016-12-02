@@ -9,12 +9,14 @@ server.on("request", function(req, res) {
  var urlData = url.parse(req.url, true);
  try {
   if(urlData['pathname'] == '/')
-   fileBuffer =  fs.readFileSync("public/index.html");
+    fileBuffer =  fs.readFileSync("public/index.html");
   else
-   fileBuffer =  fs.readFileSync("public/" + urlData['pathname']);
+    fileBuffer =  fs.readFileSync("public/" + urlData['pathname']);
   res.end(fileBuffer);
  } catch(e) {
   res.writeHead(404, {"Location": urlData['pathname']});
   res.end();
  }
 })
+
+server.listen(process.env.PORT || 3000);
